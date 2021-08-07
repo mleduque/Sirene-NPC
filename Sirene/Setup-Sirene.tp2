@@ -270,3 +270,35 @@ THEN BEGIN
 COPY_EXISTING ~c02siren.cre~ ~override~
 WRITE_SHORT 0x246 0x4000 + ~%C0DC%~
 END
+
+BEGIN ~Crossmod dialogues~
+DESIGNATED 201
+REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
+
+// Sirene-White
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0siren.dlg~ AND FILE_EXISTS_IN_GAME ~V#1WHIB.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and White~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/white.d~
+END
+
+// Sirene-Verr'Sza
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0siren.dlg~ AND FILE_EXISTS_IN_GAME ~L#1VerrB.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Verr'Sza~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/verrsza.d~
+END
+
+// Sirene-Drake
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0siren.dlg~ AND FILE_EXISTS_IN_GAME ~bc0drake.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Drake~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/drake.d~
+END
+
+// Sirene-Aura
+ACTION_IF FILE_EXISTS_IN_GAME ~bc0siren.dlg~ AND FILE_EXISTS_IN_GAME ~bc0aura.dlg~
+THEN BEGIN
+  PRINT ~Adding crossmod banters between Sirene and Aura~
+COMPILE ~%MOD_FOLDER%/dialogue/crossmod/aura.d~
+END
