@@ -10,11 +10,13 @@ LANGUAGE ~English~
          ~%MOD_FOLDER%/translations/english/sirene.tra~
 
 BEGIN ~Sirene NPC for Baldur's Gate: Enhanced Edition~
+DESIGNATED 0
 INCLUDE ~%MOD_FOLDER%/lib/Sirene.tpa~
 
 // Alternate Classes
 
 BEGIN ~True Paladin~
+DESIGNATED 1
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
 COPY_EXISTING ~c0sirene.cre~ ~override~
@@ -26,6 +28,7 @@ WRITE_SHORT 0x246 0x4000
 END
 
 BEGIN ~Cavalier~
+DESIGNATED 2
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
 COPY_EXISTING ~c0sirene.cre~ ~override~
@@ -37,6 +40,7 @@ WRITE_SHORT 0x246 0x4004
 END
 
 BEGIN ~Inquisitor~
+DESIGNATED 3
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
 COPY_EXISTING ~c0sirene.cre~ ~override~
@@ -48,6 +52,7 @@ WRITE_SHORT 0x246 0x4005
 END
 
 BEGIN ~Undead Hunter~
+DESIGNATED 4
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
 COPY_EXISTING ~c0sirene.cre~ ~override~
@@ -212,6 +217,7 @@ Weight: 1~
 END */
 
 BEGIN ~Divine Champion~
+DESIGNATED 5
 SUBCOMPONENT ~Choose an alternate class for Sirene?~
 REQUIRE_COMPONENT ~Sirene.tp2~ ~0~ ~This component requires Sirene to be installed~
 REQUIRE_COMPONENT ~Setup-HouseTweaks.tp2~ ~2~ ~This component requires the Divine Champion Kit to be installed~
